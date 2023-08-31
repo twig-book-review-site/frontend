@@ -14,14 +14,6 @@ const button = cva(['rounded-[100px]', 'border', 'rounded'], {
       medium: ['text-base', 'py-2', 'py-4'],
     },
   },
-  // compoundVariants: [
-  // {
-  // primary이고 medium일 때 upppercase 적용
-  // intent: 'primary',
-  // size: 'medium',
-  // class: 'upppercase',
-  // },
-  // ],
   defaultVariants: {
     intent: 'primary',
     size: 'medium',
