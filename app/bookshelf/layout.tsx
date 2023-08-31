@@ -1,4 +1,4 @@
-import BookshelfNavigation from '@/src/components/navigation/bookshelf-navigation';
+import BookshelfNavigation from '@/app/components/navigation/bookshelf-navigation';
 import React from 'react';
 
 const BookshelfLayout = ({ children }: { children: React.ReactNode }) => {
