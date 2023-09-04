@@ -1,11 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       backgroundImage: {
@@ -20,6 +16,12 @@ const config: Config = {
           100: '#feffe1',
         },
         secondary: '#1f1f1f',
+        tertiary: {
+          500: '787868',
+          400: 'DEDECC',
+          300: 'F4F3EE',
+          50: 'FCFBFA',
+        },
         negative: {
           DEFAULT: '#d82c0d',
           light: '#fff4f4',
