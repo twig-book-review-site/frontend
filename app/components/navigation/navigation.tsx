@@ -3,7 +3,7 @@ import React from 'react';
 
 const Navigation = () => {
   return (
-    <div className='border-solid border-2 border-sky-500 h-screen w-72'>
+    <div className='border-solid border-2 border-sky-500 h-screen w-60'>
       <div>
         <Link className='text-lg font-bold ' href='/'>
           Twig
@@ -22,7 +22,6 @@ const Navigation = () => {
           </ul>
         </nav>
       </div>
-      {/* </PaddingConatiner> */}
     </div>
   );
 };
