@@ -5,7 +5,8 @@ const BookshelfLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex'>
       <BookshelfNavigation />
-      {children}
+
+      <div className='bg-yellow-100 w-full'>{children}</div>
     </div>
   );
 };
