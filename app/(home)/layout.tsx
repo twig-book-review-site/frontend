@@ -5,7 +5,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex'>
       <Navigation />
-      <div className='bg-slate-100 w-full'>{children}</div>
+      <div className='w-full'>{children}</div>
     </div>
   );
 };
