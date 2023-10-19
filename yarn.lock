@@ -114,6 +114,11 @@
   dependencies:
     glob "7.1.7"
 
+"@next/font@^13.5.4":
+  version "13.5.4"
+  resolved "https://registry.yarnpkg.com/@next/font/-/font-13.5.4.tgz#5b5d204d8c6de035688b5728131cc0d7edaf2da3"
+  integrity sha512-rOMki1/9BP9N93RZABiiF0EidMGgyCvNVSKvLLAnMkVh/IYk4Z827+NRuxCyRQCeT3vv/AeCiP5SFPAP10SPrQ==
+
 "@next/swc-darwin-arm64@13.4.19":
   version "13.4.19"
   resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.19.tgz#77ad462b5ced4efdc26cb5a0053968d2c7dac1b6"
@@ -2399,10 +2404,10 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
-typescript@5.1.6:
-  version "5.1.6"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.1.6.tgz#02f8ac202b6dad2c0dd5e0913745b47a37998274"
-  integrity sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==
+typescript@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.2.tgz#5ebb5e5a5b75f085f22bc3f8460fba308310fa78"
+  integrity sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

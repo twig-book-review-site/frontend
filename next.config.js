@@ -17,6 +17,14 @@ const nextConfig = {
       },
     ];
   },
+  experimental: {
+    fontLoaders: [
+      {
+        loader: '@next/font/google',
+        option: { subset: ['latin'] },
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

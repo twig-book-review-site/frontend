@@ -1,6 +1,8 @@
 import React from 'react';
 import { DUMMY_MY_BOOKS } from '@/DUMMY_DATA';
 import { notFound } from 'next/navigation';
+import Display from '@/app/components/typography/display';
+import SentenceCard from '@/app/components/bookshelf/sentence-card';
 
 interface SentenceCard {
   id: number;
@@ -8,7 +10,7 @@ interface SentenceCard {
   created: string;
   sentence: string;
   ideas: string[];
-  bookmarked: boolean;
+  isBookmarked: boolean;
 }
 
 export const generateStaticParams = async () => {
@@ -24,18 +26,27 @@ const Page = ({ params }: { params: { id: string } }) => {
 
   return (
     <div>
-      <div>{book.title}</div>
-      <div>{book.author}</div>
+      {/* Header */}
       <div>
-        {book?.sentence_cards.map((card: SentenceCard) => (
-          <div key={card.created}>
-            <div>{card.created}</div>
-            <div>{card.bookmarked}</div>
-            <div>{card.page}</div>
-            <div>{card.sentence}</div>
-            <div>(ideas: {card.ideas})</div>
-            <div>----------------------------------------------</div>
+        <div className='flex items-end px-4 z-10 h-12'>
+          <h1 className='font-batang text-xl'>{book.title}</h1>
+          <h2 className='font-batang pl-3'>{book.author}</h2>
+        </div>
+        <div className='flex justify-between px-4 py-2'>
+          <span className='font-gothic text-gray-400 text-xs'>총 NN개</span>
+          <div className='font-gothic text-gray-400 text-xs'>
+            <span className='pr-2'>
+              <input type='checkbox' className='mr-2' />
+              북마크만 보기
+            </span>
+            <span className='pr-2'>최신순</span>
           </div>
+        </div>
+      </div>
+      {/* Sentences */}
+      <div className='flex flex-col justify-end h-screen'>
+        {book?.sentence_cards.map((card: SentenceCard) => (
+          <SentenceCard key={card.created} id={card.id} page={card.page} created={card.created} sentence={card.sentence} ideas={card.ideas} isBookmarked={card.isBookmarked} />
         ))}
       </div>
     </div>

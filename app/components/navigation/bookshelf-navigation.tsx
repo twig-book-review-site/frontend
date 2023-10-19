@@ -1,14 +1,17 @@
-import Link from 'next/link';
 import React from 'react';
-import BookCard from '../bookshelf/book-card';
+import Link from 'next/link';
 import { DUMMY_BOOKS } from '@/DUMMY_DATA';
+import BookCard from '../bookshelf/book-card';
+import Display from '../typography/display';
 
 const BookshelfNavigation = () => {
   return (
-    <div className='border-solid border-2 border-sky-500 h-screen w-72'>
-      <h1>나의 책장</h1>
-      <div className='flex justify-between'>
-        <span>전체{DUMMY_BOOKS.length}권</span>
+    <div className='h-screen border-r border-gray-300 bg-tertiary-200'>
+      <h1 className='px-2 py-3 hidden lg:block'>
+        <Display size='small'>나의 책장</Display>
+      </h1>
+      <div className='flex justify-between px-2 py-3'>
+        <span className='text-gray-600 hidden lg:inline'>전체{DUMMY_BOOKS.length}권</span>
         <span>책 추가</span> {/* 책 추가 버튼 */}
       </div>
       <nav>
@@ -16,7 +19,7 @@ const BookshelfNavigation = () => {
           {DUMMY_BOOKS.map((book) => (
             <li key={book.title}>
               <Link href={`/bookshelf/${book.id}`}>
-                <BookCard title={book.title} author={book.author} sentences={book.sentences} ideas={book.ideas} />
+                <BookCard id={book.id} title={book.title} author={book.author} sentences={book.sentences} ideas={book.ideas} />
               </Link>
             </li>
           ))}
