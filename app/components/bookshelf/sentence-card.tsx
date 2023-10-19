@@ -17,8 +17,7 @@ const SentenceCard = ({ id, page, created, sentence, ideas, isBookmarked }: Sent
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    // ======== Sentence box ========
-    <div className='flex flex-col p-3 border-gray-300 border-2' onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
+    <div className='flex flex-col p-3 border-gray-200 border-b' onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
       <div className='flex justify-between'>
         <div className='text-primary-600 text-base'>p. {page}</div>
         <div className='text-gray-500 text-sm'>{created}</div>
