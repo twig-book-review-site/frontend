@@ -12,7 +12,7 @@ const NavigationItem = ({ name }: NavigationItemProps) => {
       <span>
         <Image src={BookshelfIcon} alt='bookshelf' />
       </span>
-      <span className='lg:inline hidden ml-1'>{name}</span>
+      <span className='xl:inline hidden ml-1'>{name}</span>
     </li>
   );
 };

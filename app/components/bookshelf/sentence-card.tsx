@@ -22,7 +22,7 @@ const SentenceCard = ({ id, page, created, sentence, ideas, isBookmarked }: Sent
         <div className='text-primary-600 text-base'>p. {page}</div>
         <div className='text-gray-500 text-sm'>{created}</div>
       </div>
-      <span className='font-gothic text-sm lg:w-[1006px]'>{sentence}</span>
+      <span className='font-gothic text-sm 2xl:w-[1006px]'>{sentence}</span>
 
       <div className='h-8 flex justify-end'>
         {isVisible && (
