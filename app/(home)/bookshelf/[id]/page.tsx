@@ -25,33 +25,28 @@ const Page = ({ params }: { params: { id: string } }) => {
   if (!book) return notFound();
 
   return (
-    <div className='w-full'>
+    <div>
       {/* Header */}
-      <div className='h-20'>
-        <div className='w-full h-20 absolute bg-white opacity-50' />
-        <div className='w-full h-20 flex items-center px-3 absolute'>
-          <h1 className='font-batang text-3xl'>
-            {/* <Display size='large'>{book.title}</Display> */}
-            {book.title}
-          </h1>
-          <h2 className='font-batang text-xl pl-3'>
-            {/* <Display size='small'> {book.author}</Display> */}
-            {book.author}
-          </h2>
+      <div>
+        <div className='flex items-end px-4 z-10 h-12'>
+          <h1 className='font-batang text-xl'>{book.title}</h1>
+          <h2 className='font-batang pl-3'>{book.author}</h2>
+        </div>
+        <div className='flex justify-between px-4 py-2'>
+          <span className='font-gothic text-gray-400 text-xs'>총 NN개</span>
+          <div className='font-gothic text-gray-400 text-xs'>
+            <span className='pr-2'>
+              <input type='checkbox' className='mr-2' />
+              북마크만 보기
+            </span>
+            <span className='pr-2'>최신순</span>
+          </div>
         </div>
       </div>
       {/* Sentences */}
-      <div className='p-3'>
+      <div className='flex flex-col justify-end h-screen'>
         {book?.sentence_cards.map((card: SentenceCard) => (
-          <SentenceCard
-            key={card.created}
-            id={card.id}
-            page={card.page}
-            created={card.created}
-            sentence={card.sentence}
-            ideas={card.ideas}
-            isBookmarked={card.isBookmarked}
-          />
+          <SentenceCard key={card.created} id={card.id} page={card.page} created={card.created} sentence={card.sentence} ideas={card.ideas} isBookmarked={card.isBookmarked} />
         ))}
       </div>
     </div>
