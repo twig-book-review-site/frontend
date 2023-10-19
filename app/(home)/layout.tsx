@@ -4,10 +4,10 @@ import React from 'react';
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex'>
-      <div className='lg:w-[160px]'>
+      <div className='xl:w-[160px]'>
         <Navigation />
       </div>
-      <div className='lg:w-[1302px] grow'>{children}</div>
+      <div className='xl:w-[1302px] grow'>{children}</div>
     </div>
   );
 };

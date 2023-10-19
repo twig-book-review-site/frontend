@@ -8,9 +8,9 @@ const config: Config = {
     screens: {
       sm: '640px', // 640px ~ 767px
       md: '768px', // 768px ~ 1249px
-      lg: '1250px', // 1250px ~
-      xl: '1480px', // 1480px ~
-      // '2xl': '1536px',
+      lg: '1024px',
+      xl: '1250px', // 1250px ~
+      '2xl': '1480px', // 1480px ~
     },
     extend: {
       fontFamily: {

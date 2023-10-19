@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className='grid'>
-      <body className={`${gowun_batang.variable} ${nanum_gothic.variable} justify-self-center xl:w-[1462px] w-full`}>{children}</body>
+      <body className={`${gowun_batang.variable} ${nanum_gothic.variable} justify-self-center 2xl:w-[1462px] w-full`}>{children}</body>
     </html>
   );
 }

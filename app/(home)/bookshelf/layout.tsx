@@ -7,7 +7,7 @@ const BookshelfLayout = ({ children }: { children: React.ReactNode }) => {
       <div className='md:w-[240px]'>
         <BookshelfNavigation />
       </div>
-      <div className='md:w-[528px] lg:w-[1062px] grow'>{children}</div>
+      <div className='md:w-[528px] lg:w-min xl:w-[1062px] grow'>{children}</div>
     </div>
   );
 };
