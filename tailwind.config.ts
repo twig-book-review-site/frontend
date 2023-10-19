@@ -3,12 +3,15 @@ import type { Config } from 'tailwindcss';
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
+    screens: {
+      sm: '640px', // 640px ~ 767px
+      md: '768px', // 768px ~ 1249px
+      lg: '1250px', // 1250px ~
+      xl: '1480px', // 1480px ~
+      // '2xl': '1536px',
+    },
     extend: {
       fontFamily: {
         batang: ['var(--font-gowun-batang)'],
