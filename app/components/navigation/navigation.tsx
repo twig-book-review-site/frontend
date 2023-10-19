@@ -1,15 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 import NavigationItem from './navigation-item';
-import Display from '../typography/display';
 
 const Navigation = () => {
   return (
-    <div className='bg-tertiary-300 border-r border-gray-300 h-screen lg:w-40 md:w-16 w-12'>
-      {/* <div className='border-r border-gray-300 h-screen lg:bg-blue-300 md:bg-yellow-400 bg-red-400 w-13'> */}
+    <div className='bg-tertiary-300 border-r border-gray-300 h-screen'>
       <div>
         <Link href='/'>
-          <Display>Twig</Display>
+          <div className='font-batang lg:text-2xl text-lg p-2'>Twig</div>
         </Link>
         <nav className='mt-3'>
           <ul>

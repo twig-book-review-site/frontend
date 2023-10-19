@@ -9,10 +9,10 @@ interface NavigationItemProps {
 const NavigationItem = ({ name }: NavigationItemProps) => {
   return (
     <li className='p-3 hover:bg-tertiary-400 font-gothic text-base flex'>
-      <span className='mr-1'>
+      <span>
         <Image src={BookshelfIcon} alt='bookshelf' />
       </span>
-      <span className='lg:inline hidden'>{name}</span>
+      <span className='lg:inline hidden ml-1'>{name}</span>
     </li>
   );
 };
