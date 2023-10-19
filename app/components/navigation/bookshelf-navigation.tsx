@@ -6,7 +6,7 @@ import Display from '../typography/display';
 
 const BookshelfNavigation = () => {
   return (
-    <div className='h-screen xl:w-72 lg:w-64 w-[70px] border-r border-gray-300 bg-tertiary-200'>
+    <div className='h-screen border-r border-gray-300 bg-tertiary-200'>
       <h1 className='px-2 py-3 hidden lg:block'>
         <Display size='small'>나의 책장</Display>
       </h1>
