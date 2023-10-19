@@ -17,34 +17,29 @@ const SentenceCard = ({ id, page, created, sentence, ideas, isBookmarked }: Sent
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div
-      className='flex my-4 w-full'
-      onMouseEnter={() => setIsVisible(true)}
-      onMouseLeave={() => setIsVisible(false)}
-    >
-      <div className='text-primary-600 w-12 py-2 text-base'>p. {page}</div>
-
-      {/* Sentence box */}
-      <div className='border border-gray-200 w-[780px] flex flex-col p-2'>
-        {/* <div>{isBookmarked}</div> */}
-        <p className='p-2 font-gothic text-sm '> {sentence}</p>
-        <div className='text-gray-500 self-end text-sm'>{created}</div>
-        {/* <div>(ideas: {ideas})</div> */}
+    // ======== Sentence box ========
+    <div className='flex flex-col p-3 border-gray-300 border-2' onMouseEnter={() => setIsVisible(true)} onMouseLeave={() => setIsVisible(false)}>
+      <div className='flex justify-between'>
+        <div className='text-primary-600 text-base'>p. {page}</div>
+        <div className='text-gray-500 text-sm'>{created}</div>
       </div>
-      {/* Buttons */}
-      {isVisible && (
-        <div className='bg-tertiary-300 mx-2 self-end rounded-md flex justify-between p-1 w-[90px]'>
-          <button className='flex justify-center w-[30px] hover:bg-tertiary-400 rounded-md'>
-            <Image src={BookmarkIcon} alt='bookmark' width={22} />
-          </button>
-          <button className='flex justify-center  w-[30px] pt-1 hover:bg-tertiary-400 rounded-md'>
-            <Image src={DownRightArrowIcon} alt='write-idea' />
-          </button>
-          <button className='flex justify-center w-[30px] pt-1 hover:bg-tertiary-400 rounded-md'>
-            <Image src={MoreIcon} alt='more' />
-          </button>
-        </div>
-      )}
+      <span className='font-gothic text-sm lg:w-[1006px]'>{sentence}</span>
+
+      <div className='h-8 flex justify-end'>
+        {isVisible && (
+          <div className='flex justify-between w-[80px]'>
+            <button className='flex justify-center'>
+              <Image src={BookmarkIcon} alt='bookmark' width={22} />
+            </button>
+            <button className='flex justify-center  pt-1'>
+              <Image src={DownRightArrowIcon} alt='write-idea' />
+            </button>
+            <button className='flex justify-center pt-1'>
+              <Image src={MoreIcon} alt='more' />
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
