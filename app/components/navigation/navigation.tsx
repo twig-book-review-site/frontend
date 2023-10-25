@@ -7,7 +7,7 @@ const Navigation = () => {
     <div className='bg-tertiary-300 border-r border-gray-300 h-screen'>
       <div>
         <Link href='/'>
-          <div className='font-batang 2xl:text-2xl text-lg p-2'>Twig</div>
+          <div className='font-batang xl:text-2xl text-lg p-2'>Twig</div>
         </Link>
         <nav className='mt-3'>
           <ul>
