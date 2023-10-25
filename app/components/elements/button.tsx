@@ -2,11 +2,12 @@ import * as React from 'react';
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 
-const button = cva(['rounded-[10px]', 'border'], {
+const button = cva(['cursor-pointer, font-gothic'], {
   variants: {
     intent: {
-      primary: ['bg-black', 'text-white', 'hover:bg-blue-600'],
-      secondary: ['bg-white', 'text-gray-800', 'border-gray-400', 'hover:bg-gray-100'],
+      primary: ['bg-primary-200', 'text-gray-800', 'hover:bg-primary-500'],
+      secondary: ['bg-tertiary-500', 'text-white', 'hover:bg-tertiary-600'],
+      // disabled: ['cursor-not-allowed', 'bg-gray-200', 'text-gray-500', 'hover:bg-gray-200'],
     },
     size: {
       large: ['h-[52px]', 'text-base', 'px-5', 'py-4'],
@@ -19,7 +20,6 @@ const button = cva(['rounded-[10px]', 'border'], {
   },
 
   defaultVariants: {
-    intent: 'primary',
     size: 'medium',
     disabled: false,
   },

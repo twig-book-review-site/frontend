@@ -3,7 +3,11 @@ import type { Config } from 'tailwindcss';
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 const config: Config = {
-  content: ['./pages/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     screens: {
       sm: '640px', // 640px ~ 767px
@@ -23,18 +27,17 @@ const config: Config = {
       },
       colors: {
         primary: {
-          600: '#A4A47E', // <--- 600
+          600: '#6A6A61',
           500: '#e4f222',
-          200: '#f5ff78',
+          200: '#F5FF78',
           100: '#feffe1',
         },
         secondary: '#1f1f1f',
         tertiary: {
+          600: '#6B6B5B',
           500: '#787868',
-          // #9D9D95
           400: '#EEECE5',
           300: '#F4F3EE',
-          // #F2F2EB
           200: '#FAF9F4',
           50: '#FCFBFA',
         },
