@@ -1,9 +1,8 @@
 import React from 'react';
-import { DUMMY_MY_BOOKS } from '@/DUMMY_DATA';
 import { notFound } from 'next/navigation';
-import Display from '@/app/components/typography/display';
 import SentenceCard from '@/app/components/bookshelf/sentence-card';
 import Input from '@/app/components/bookshelf/input';
+import { DUMMY_MY_BOOKS } from '@/mockup/DUMMY_DATA';
 interface SentenceCard {
   id: number;
   page: number;

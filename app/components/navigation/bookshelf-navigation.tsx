@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { DUMMY_BOOKS } from '@/DUMMY_DATA';
+import { DUMMY_BOOKS } from '@/mockup/DUMMY_DATA';
 import BookCard from '../bookshelf/book-card';
 import Display from '../typography/display';
 
