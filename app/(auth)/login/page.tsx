@@ -1,7 +1,9 @@
-import React from 'react';
+import LoginCard from "@/app/components/views/login-card";
 
 const LoginPage = () => {
-  return <div>Login Page</div>;
+  return <div className=''>
+    <LoginCard />
+  </div>;
 };
 
 export default LoginPage;

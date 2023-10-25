@@ -1,7 +1,12 @@
-import React from 'react';
+import {ReactNode} from "react";
+import { Inter } from 'next/font/google';
 
-const AuthLayout = ({ children }: { children: React.ReactNode }) => {
-  return <div className='flex'>{children}</div>;
-};
+const inter = Inter({ subsets: ['latin'] });
 
-export default AuthLayout;
+export default function LoginLayout ({ children }: { children: ReactNode }) {
+  return (
+        <main className='flex items-center justify-center h-screen w-full'>
+          {children}
+        </main>
+  );
+}
