@@ -3,7 +3,7 @@ import { DUMMY_MY_BOOKS } from '@/DUMMY_DATA';
 import { notFound } from 'next/navigation';
 import Display from '@/app/components/typography/display';
 import SentenceCard from '@/app/components/bookshelf/sentence-card';
-
+import Input from '@/app/components/bookshelf/input';
 interface SentenceCard {
   id: number;
   page: number;
@@ -23,9 +23,8 @@ const Page = ({ params }: { params: { id: string } }) => {
   const book = DUMMY_MY_BOOKS.find((book) => book.id === params.id);
 
   if (!book) return notFound();
-
   return (
-    <div>
+    <div className='flex flex-col h-full'>
       {/* Header */}
       <div>
         <div className='flex items-end px-4 z-10 h-12'>
@@ -44,11 +43,22 @@ const Page = ({ params }: { params: { id: string } }) => {
         </div>
       </div>
       {/* Sentences */}
-      <div className='flex flex-col justify-end h-screen'>
+      <div className='h-full flex flex-col justify-end'>
         {book?.sentence_cards.map((card: SentenceCard) => (
-          <SentenceCard key={card.created} id={card.id} page={card.page} created={card.created} sentence={card.sentence} ideas={card.ideas} isBookmarked={card.isBookmarked} />
+          <SentenceCard
+            key={card.created}
+            id={card.id}
+            page={card.page}
+            created={card.created}
+            sentence={card.sentence}
+            ideas={card.ideas}
+            isBookmarked={card.isBookmarked}
+          />
         ))}
       </div>
+
+      {/* input */}
+      <Input />
     </div>
   );
 };
