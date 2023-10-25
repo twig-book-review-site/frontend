@@ -4,10 +4,10 @@ import React from 'react';
 const BookshelfLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex'>
-      <div className='md:w-[240px]'>
+      <div className='md:w-[240px] grow-0'>
         <BookshelfNavigation />
       </div>
-      <div className='md:w-[528px] lg:w-min xl:w-[1062px] grow'>{children}</div>
+      <div className='md:w-[528px] grow 2xl:w-[1062px] h-screen'>{children}</div>
     </div>
   );
 };

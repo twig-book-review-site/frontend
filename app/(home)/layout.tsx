@@ -7,7 +7,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
       <div className='xl:w-[160px]'>
         <Navigation />
       </div>
-      <div className='xl:w-[1302px] grow'>{children}</div>
+      <div className='grow'>{children}</div>
     </div>
   );
 };
