@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { DUMMY_BOOKS } from '@/mockup/DUMMY_DATA';
 import BookCard from '../bookshelf/book-card';
 import Display from '../typography/display';
+import Button from '../elements/button';
 
 const BookshelfNavigation = () => {
   return (
@@ -11,8 +12,12 @@ const BookshelfNavigation = () => {
         <Display size='small'>나의 책장</Display>
       </h1>
       <div className='flex justify-between px-2 py-3'>
-        <span className='text-gray-600 hidden lg:inline'>전체{DUMMY_BOOKS.length}권</span>
-        <span>책 추가</span> {/* 책 추가 버튼 */}
+        <span className='text-gray-600 hidden lg:inline mt-1 font-gothic text-sm'>
+          전체 {DUMMY_BOOKS.length}권
+        </span>
+        <Button intent='secondary' size='small'>
+          책 추가
+        </Button>
       </div>
       <nav>
         <ul>
