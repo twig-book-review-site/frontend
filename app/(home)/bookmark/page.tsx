@@ -1,26 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
-import { BookmarkIcon, DownRightArrowIcon, MoreIcon } from '@/assets/icons';
 import Button from '@/app/components/elements/button';
-import Textarea from '../../components/elements/textarea';
+import Subheader from '@/app/components/elements/subheader';
 
 const Bookmark = () => {
   return (
-    <div>
-      <h2>Bookmark</h2>
-      <Image src={BookmarkIcon} alt='bookmark-icon' width={30} />
-      <Image src={BookmarkIcon} alt='bookmark-icon' width={50} />
-      <Button intent='primary' size='medium'>
-        primary
-      </Button>
-      <Button intent='secondary' size='medium'>
-        secondary
-      </Button>
-      <Button size='medium' disabled>
-        disabled
-      </Button>
-      <br />
-      <Textarea />
+    <div className='flex flex-col h-full'>
+      <div className='flex items-end px-4 z-10 h-12'>
+        <h1 className='font-batang text-xl'>북마크</h1>
+      </div>
+      <Subheader />
     </div>
   );
 };
