@@ -1,8 +1,9 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
+import { DUMMY_MY_BOOKS } from '@/mockup/DUMMY_DATA';
 import SentenceCard from '@/app/components/bookshelf/sentence-card';
 import Input from '@/app/components/bookshelf/input';
-import { DUMMY_MY_BOOKS } from '@/mockup/DUMMY_DATA';
+import Subheader from '@/app/components/elements/subheader';
 interface SentenceCard {
   id: number;
   page: number;
@@ -30,16 +31,7 @@ const Page = ({ params }: { params: { id: string } }) => {
           <h1 className='font-batang text-xl'>{book.title}</h1>
           <h2 className='font-batang pl-3'>{book.author}</h2>
         </div>
-        <div className='flex justify-between px-4 py-2'>
-          <span className='font-gothic text-gray-400 text-xs'>총 NN개</span>
-          <div className='font-gothic text-gray-400 text-xs'>
-            <span className='pr-2'>
-              <input type='checkbox' className='mr-2' />
-              북마크만 보기
-            </span>
-            <span className='pr-2'>최신순</span>
-          </div>
-        </div>
+        <Subheader />
       </div>
       {/* Sentences */}
       <div className='h-full flex flex-col justify-end'>
