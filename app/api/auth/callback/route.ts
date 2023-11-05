@@ -8,11 +8,21 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({message: 'There is no code'}, {status: 400});
     }
     try {
-        const userInfo = await authService.login(code, 'kakao')
-        cookies().set('accessToken', userInfo.accessToken.token, { secure: true })
-        cookies().set('refreshToken', userInfo.refreshToken.token, { secure: true })
-        return NextResponse.redirect('/');
+        const tokenResponse = await authService.getAccessTokenFromKakao(code)
+        const userInfo = await authService.login(tokenResponse.access_token, 'kakao')
+        cookies().set({
+            name: 'accessToken',
+            value: userInfo.access.token,
+            expires: new Date(Date.now() + userInfo.access.expiresIn * 1000)
+        })
+        cookies().set({
+            name: 'refreshToken',
+            value: userInfo.refresh.token,
+            expires: new Date(Date.now() + userInfo.refresh.expiresIn * 1000)
+        })
+        return NextResponse.redirect(new URL('/bookshelf', req.url));
     } catch (e) {
-        return NextResponse.rewrite(new URL('/login', req.url));
+        console.log(e)
+        return NextResponse.redirect(new URL('/login', req.url));
     }
 }
