@@ -1,11 +1,11 @@
 import config from '@/app/config'
 
 type LoginResponse = {
-    accessToken: {
+    access: {
         token: string,
         expiresIn: number,
     }
-    refreshToken: {
+    refresh: {
         token: string,
         expiresIn: number,
     }
@@ -21,8 +21,6 @@ const checkToken = async (token: string, type: string) => {
 }
 
 const login = async (accessToken: string, authServer: string): Promise<LoginResponse> => {
-    `http://219.248.110.167:30800/login`
-
     const loginResponse = await fetch(`${url}/login`, {
         method: "POST",
         headers: {
@@ -34,7 +32,6 @@ const login = async (accessToken: string, authServer: string): Promise<LoginResp
             authServer,
         }),
     });
-    console.log(loginResponse)
     return await loginResponse.json();
 }
 
@@ -42,8 +39,17 @@ const reissue = async () => {
     console.log('reissue');
 }
 
+const getAccessTokenFromKakao = async (code: string) => {
+    const tokenUrl = `https://kauth.kakao.com/oauth/token?grant_type=authorization_code&client_id=${process.env.KAKAO_CLIENT_ID}&redirect_uri=http://localhost:3000/api/auth/callback&code=${code}`;
+    return await fetch(tokenUrl, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+    }).then((res) => res.json());
+}
+
 export default {
     checkToken,
     login,
     reissue,
+    getAccessTokenFromKakao,
 }
